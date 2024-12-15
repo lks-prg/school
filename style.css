@@ -56,6 +56,16 @@ p{
     max-width: 80%;
     margin-top: 10px;
 }
+ol>li{
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left:10%;
+        max-width: 80%;
+        margin-top: 10px;
+}
 table {
     width: 100%;
     border-collapse: collapse;
