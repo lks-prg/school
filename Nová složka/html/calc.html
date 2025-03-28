@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <style>
+                    table{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        border: solid 1px black;
+                        border-radius: 30px;
+                        width: 500px;
+                        height: 500px;
+                    }
+
+                    #output{
+                        margin-top:15px;
+                        margin-left: 25px;
+                        margin-right: 15px;
+                        width: 435px;
+                        font-size: 30px;
+                        border-radius: 20px;
+                        border: 2px solid black;
+                        padding-right: 10px;
+                        background: deepskyblue;
+                        text-align: end;
+                        height: 20px;
+                        min-height: 20px;
+                    }
+
+                    button{
+                        width: 75px;
+                        height: 60px;
+                        border: 2px solid black;
+                        margin-left: 25px;
+                        border-radius: 20px;
+                        background: lightyellow;
+                    }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr><td scope="row" colspan="4"><p id=output>0</p>
+            </thead>
+            <tr><td><button onclick="sedm()">7</button><td><button onclick="osm()">8</button><td><button onclick="devet()">9</button><td><button onclick="deleno()">/</button>
+            <tr><td><button onclick="ctyri()">4</button><td><button onclick="pet()">5</button><td><button onclick="sest()">6</button><td><button onclick="krat()">*</button>
+            <tr><td><button onclick="jedna()">1</button><td><button onclick="dva()">2</button><td><button onclick="tri()">3</button><td><button onclick="minus()">-</button>
+            <tr><td><button onclick="nula()">0</button><td><button onclick="vymaz()">C</button><td><button onclick="rovna_se()">=</button><td><button onclick="plus()">+</button>
+        </table>
+        <script>
+            str="";krok=+0;vysledek=+0;znak="";
+            function nula(){
+                str=str+"0";
+                document.getElementById("output").innerText=str;
+            }
+            function jedna(){
+                str=str+"1";
+                document.getElementById("output").innerText=str;
+            }
+            function dva(){
+                str=str+"2";
+                document.getElementById("output").innerText=str;
+            }
+            function tri(){
+                str=str+"3";
+                document.getElementById("output").innerText=str;
+            }
+            function ctyri(){
+                str=str+"4";
+                document.getElementById("output").innerText=str;
+            }
+            function pet(){
+                str=str+"5";
+                document.getElementById("output").innerText=str;
+            }
+            function sest(){
+                str=str+"6";
+                document.getElementById("output").innerText=str;
+            }
+            function sedm(){
+                str=str+"7";
+                document.getElementById("output").innerText=str;
+            }
+            function osm(){
+                str=str+"8";
+                document.getElementById("output").innerText=str;
+            }
+            function devet(){
+                str=str+"9";
+                document.getElementById("output").innerText=str;
+            }
+            function plus(){
+                vysledek=vysledek+parseInt(str);
+                str="";
+                znak="+";
+                document.getElementById("output").innerText="+";
+            }
+            function minus(){
+                vysledek=vysledek-parseInt(str);
+                str="";
+                znak="-";
+             //   document.getElementById("output").innerText=str;
+            }
+            function krat(){
+                vysledek=vysledek*parseInt(str);
+                str="";
+                znak="*";
+               // document.getElementById("output").innerText=str;
+            }
+            function deleno(){
+                vysledek=vysledek/parseInt(str);
+                str="";
+                znak="/";
+              //  document.getElementById("output").innerText=str;
+            }
+            function vymaz(){
+                vysledek="";
+                str="";
+                znak="";
+              //  document.getElementById("output").innerText=str;
+            }
+            function rovna_se(){
+                if(znak=="+")vysledek=vysledek+parseInt(str);
+                else if(znak=="-")vysledek=vysledek-parseInt(str);
+                else if(znak=="*")vysledek=vysledek*parseInt(str);
+                else if(znak=="/")vysledek=vysledek/parseInt(str);
+                str="";
+                document.getElementById("output").innerText=vysledek;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <input type="number" id="cislo" max="6" min="1" onchange="Check()">
+        <img src="./1.png" id="jedna" hidden>
+        <img src="./2.png" id="dva" hidden>
+        <img src="./3.png" id="tri" hidden>
+        <img src="./4.png" id="ctyri" hidden>
+        <img src="./5.png" id="pet" hidden>
+        <img src="./6.png" id="sest" hidden>
+        <script>
+            function Check(){
+                number =+ cislo.value;
+                if(number==1){
+                    jedna.removeAttribute('hidden');
+                    dva.setAttribute('hidden', 'true');
+                    tri.setAttribute('hidden', 'true');
+                    ctyri.setAttribute('hidden', 'true');
+                    pet.setAttribute('hidden', 'true');
+                    sest.setAttribute('hidden', 'true');
+                }
+                if(number==2){
+                    dva.removeAttribute('hidden');
+                    jedna.setAttribute('hidden', 'true');
+                    tri.setAttribute('hidden', 'true');
+                    ctyri.setAttribute('hidden', 'true');
+                    pet.setAttribute('hidden', 'true');
+                    sest.setAttribute('hidden', 'true');
+                }
+                if(number==3){
+                    tri.removeAttribute('hidden');
+                    jedna.setAttribute('hidden', 'true');
+                    dva.setAttribute('hidden', 'true');
+                    ctyri.setAttribute('hidden', 'true');
+                    pet.setAttribute('hidden', 'true');
+                    sest.setAttribute('hidden', 'true');
+                }
+                if(number==4){
+                    ctyri.removeAttribute('hidden');
+                    jedna.setAttribute('hidden', 'true');
+                    dva.setAttribute('hidden', 'true');
+                    tri.setAttribute('hidden', 'true');
+                    pet.setAttribute('hidden', 'true');
+                    sest.setAttribute('hidden', 'true');
+                }
+                if(number==5){
+                    pet.removeAttribute('hidden');
+                    jedna.setAttribute('hidden', 'true');
+                    dva.setAttribute('hidden', 'true');
+                    ctyri.setAttribute('hidden', 'true');
+                    tri.setAttribute('hidden', 'true');
+                    sest.setAttribute('hidden', 'true');
+                }
+                if(number==6){
+                    sest.removeAttribute('hidden');
+                    jedna.setAttribute('hidden', 'true');
+                    dva.setAttribute('hidden', 'true');
+                    ctyri.setAttribute('hidden', 'true');
+                    pet.setAttribute('hidden', 'true');
+                    tri.setAttribute('hidden', 'true');
+                }
+            }
+        </script>
+    </body>
+</html>

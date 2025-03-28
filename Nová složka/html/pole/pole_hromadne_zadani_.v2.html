@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <script>
+            arr=[];
+            p=0;
+            a=0;
+            bin=[];
+            bin_zbytek=[];
+            bin_cislo=0;
+            bin_pocet=0;
+
+
+            do{
+            a=+prompt("Zadej hodnotu");
+                if(a>=0){
+                     arr[p]=a;
+                     p++;
+                    if(a==0||a==1){bin[bin_pocet]=a;bin_pocet++;}
+                }
+            }
+            while(a>=0)
+            
+            for(i=0;i<bin.lenght;i++){
+                if(bin[i]==1){
+                    for(j=0;j<i;j++){
+                        bin_cislo=bin_cislo+(j*2)
+                    }
+                }
+            }
+            
+
+        </script>
+    </body>
+</html>

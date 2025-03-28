@@ -1,0 +1,22 @@
+using System;
+using static System.Console;
+ class Program
+  {
+   static void Main(string[] args)
+   {
+        Random r = new Random();
+        Write("Zadej velikost pole :");
+        int velikost = int.Parse(ReadLine());
+        int[] arr = new int[velikost];
+        for (int i = 0; i < arr.Length; i++)
+        {
+            arr[i] = r.Next(0,9);
+            Write(arr[i] + ",");
+        }
+        Write("\n---------------------------------\n");
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] == 0 || arr[i] == 1) Write(arr[i]);
+        }
+    }
+  }

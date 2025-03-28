@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <input type="number" id="number3">
+        <p id="min"></p>
+        <p id="mid"></p>
+        <p id="max"></p>
+        <button onclick="start()">Odeslat</button>
+        <script>
+        function start(){
+            number1=+number1.value;
+            number2=+number2.value;
+            number3=+number3.value;
+
+            arr=[number1,number1,number1];
+
+            if(number1>number2)arr[0]=number2;
+            if(number1>number3)arr[0]=number3;
+
+            if(number1<number2)arr[2]=number2;
+            if(number1<number3)arr[2]=number3;
+
+            arr[1]=+(number1+number2+number3)-(arr[2]+arr[0]);
+            min.innerText=arr[0];
+            mid.innerText=arr[1];
+            max.innerText=arr[2];}
+        </script>
+    </body>
+</html>

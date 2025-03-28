@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <table>
+            <th>
+            </th>
+            <tr><td>min :</td><td id="min"></td></tr>
+            <tr><td>max :</td><td id="max"></td></tr>
+            <tr><td>prumer :</td><td id="prumer"></td></tr>
+            <tr><td>sude :</td><td id="sude"></td></tr>
+            <tr><td>liche :</td><td id="liche"></td></tr>
+        </table>
+        <script>
+            arr=[];
+            sude=[];
+            liche=[];
+            p=0;
+            a=0;
+            min=9999999999999;
+            max=0;
+            prumer=0;
+            pocet_sude=0;
+            pocet_liche=0;
+            soucet=0;
+
+
+            do{
+                a=+prompt("Zadej hodnotu");
+               if(a!=0){
+                arr[p]=a;
+                p++
+                if(a<min)min=a;
+                if(a>max)max=a;
+                soucet=+soucet+a;
+                if(a%2==0){pocet_sude++;sude[pocet_sude]=a;alert("sude - true");}
+                if(a%2!=0){pocet_liche++;liche[pocet_liche]=a;alert("liche - true");}
+            }
+            }
+            while(a!=0)
+            prumer=+soucet/(p);
+
+
+            document.getElementById("min").innerText=min;
+            document.getElementById("max").innerText=max;
+            document.getElementById("prumer").innerText=prumer;
+            document.getElementById("sude").innerText=pocet_sude;
+            document.getElementById("liche").innerText=pocet_liche;
+        </script>
+    </body>
+</html>

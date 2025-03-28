@@ -1,0 +1,17 @@
+using System;
+using static System.Console;
+ class Program
+  {
+   static void Main(string[] args)
+   {
+            WriteLine("Zadej hodnotu :");
+            int i = 0, cislo;
+            cislo = int.Parse(ReadLine());
+            Clear();
+            for (i = 0; i < cislo; i++)
+            {
+                if (i % 2 == 0) WriteLine(i);
+            }
+            ReadLine();
+   }
+  }

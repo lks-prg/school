@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Test pole</h1>
+        <p>Hodnoty 1. pole :</p><p id="1pole_vypis"></p>
+        <p>Hodnoty 2. pole :</p><p id="2pole_vypis"></p>
+        <input type="button" onclick="Calc()">
+        <p id="soucet"></p>
+
+        <script>
+            pole1=[];
+            pole2=[];
+            suma=0;ram=0;
+
+            for(i=0;i<3;i++){
+                pole1[i]=+prompt("Zadej "+i+". hodnotu do 1. pole :");
+            }
+            for(j=0;j<3;j++){
+                pole2[j]=+prompt("Zadej "+j+". hodnotu do 2. pole :");
+            }
+            document.getElementById("1pole_vypis").innerText=pole1;
+            document.getElementById("2pole_vypis").innerText=pole2;
+
+            function Calc(){
+                for(i=0;i<3;i++){
+                suma=+suma+pole1[i];
+                suma=+suma+pole2[i];
+
+                }document.getElementById("1pole_vypis").hidden;
+            }
+
+        </script>
+    </body>
+
+</html>
